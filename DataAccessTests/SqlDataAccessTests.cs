@@ -21,7 +21,7 @@ namespace DataAccess.Tests
             {
                 var person = new Person
                 {
-                    Name = "İlker Halil",
+                    Name = "Osman",
                     LastName = "Türer",
                     Birthdate = new DateTime(1979, 09, 16),
                     Description = "Test açıklaması" };
