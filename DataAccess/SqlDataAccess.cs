@@ -123,25 +123,37 @@ namespace DataAccess
             {
                 if (_sqlConnection != null)
                 {
-                    //Todo: ilerde inceleyelim.
-                    //_transAction.Commit();
                     _sqlConnection.Close();
                     _sqlConnection.Dispose();
                     _sqlConnection = null;
                 }  
             }
         }
-
+        /// <summary>
+        /// Todo:Umut
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="entity"></param>
         public void Update<T>(T entity) where T : BaseEntity, new()
         {
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Todo:Devrim
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="entity"></param>
         public void Delete<T>(T entity) where T : BaseEntity, new()
         {
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Todo:Ekrem
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
         public IEnumerable<T> GetAll<T>() where T : BaseEntity, new()
         {
             throw new NotImplementedException();
