@@ -15,14 +15,19 @@ namespace Common
         void Commit();
     }
     
-    public class BaseEntity
+    /// <summary>
+    /// Todo:Haziran - delete getall yazılsın
+    /// Todo:Haziran - getall için filtre operasyonlarını hep birlikte tartışalım
+    /// Todo:Temmuz - xunit deneyelim
+    /// </summary>
+
+    public abstract class BaseEntity
     {
-        [Key(IsIdentity =true)]
-        [Field(Name ="Id",IsNullable =false,DbType =DbType.Int64)]
-        public virtual long Id { get; set; }
+        [Key(IsIdentity = true,Name = "Id", IsNullable = false, DbType = DbType.Int64)]
+        public virtual object Id { get; set; }
     }
     [AttributeUsage(AttributeTargets.Property)]
-    public class KeyAttribute : Attribute
+    public class KeyAttribute : FieldAttribute
     {
         public bool IsIdentity { get; set; }
     }
